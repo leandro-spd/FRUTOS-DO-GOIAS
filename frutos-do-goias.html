@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutos do Goiás - Catálogo de Sorvetes</title>
+    <link rel="stylesheet" href="src/css/style2.css">
+    <link href="src/css/animate.css" rel="stylesheet">
+    <link href="src/css/frutosdogoias.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>Frutos do Goiás</h1>
+        <nav>
+            <ul>
+                <li id="homeTab"><a href="#" onclick="showTab('home')">Início</a></li>
+                <li id="productsTab"><a href="#" onclick="showTab('products')">Produtos</a></li>
+                <li id="cartTab" onclick="showTab('cart')"><a href="#"><i class="fas fa-shopping-cart"></i><span id="cartBadge">0</span></a></li>                
+                <li><a href="#">Distribuidores</a></li>
+                <li><a href="#">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="tabContent">
+            <h2>Bem-vindo ao Frutos do Goiás</h2>
+            <p>Aqui você encontrará os melhores sorvetes da região!</p>
+        </section>
+        <section id="products" class="tabContent">
+            <h2>Catálogo de Sorvetes</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar sabor de picolé...">
+            <div id="iceCreamList"></div>
+        </section>
+        <section id="cart" class="tabContent">
+            <h2>Cesta de Compras</h2>
+            <div id="cartItems">
+                <!-- Aqui serão exibidos os itens selecionados -->
+            </div>
+            <p id="total">Total: R$ 0.00</p>
+            <button id="checkoutButton">Finalizar Compra</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Frutos do Goiás</p>
+    </footer>
+    <script src="src/script.js"></script>
+    <script>
+        // Função para mostrar a aba correspondente
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tabContent');
+            tabs.forEach(tab => {
+                if (tab.id === tabName) {
+                    tab.style.display = 'block';
+                    if (tabName === 'products') {
+                        renderIceCreams();
+                    }
+                } else {
+                    tab.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

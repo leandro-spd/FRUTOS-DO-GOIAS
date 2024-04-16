@@ -1,0 +1,191 @@
+/* Reset CSS básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #53db68;
+    color: #000;
+    animation: changeColor 25s infinite; /* Animação de 10 segundos, repetindo infinitamente */
+}
+header {
+    background-color: #531a7d; /* Roxo */
+    color: #f1e9e9;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 40%;
+
+}
+
+nav ul {
+    list-style-type:none;
+    padding: 2ch;
+    margin-bottom: auto;
+}
+
+nav ul li {
+    display:inline-flex ;
+    margin-right: 201px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f9f6f6;
+}
+
+main {
+    padding: 05px;
+}
+
+section {
+    display: none;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #6a0dad; /* Roxo */
+    margin-bottom: 10px;
+}
+section p {
+    padding-right: 50%;
+    color: #000;
+}
+
+#iceCreamList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilo para o contêiner de cada item de sorvete */
+
+
+footer {
+    background-color: #000; /* Preto */
+    color: #ebe6e6;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+/* Estilo para o contêiner de cada item de sorvete */
+.iceCreamItem {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+    overflow: hidden;
+}
+/* Adiciona margem entre os sorvetes */
+.iceCreamItem {
+    margin-bottom: 20px;
+}
+
+/* Estilo para as imagens dentro dos contêineres */
+.iceCreamItem img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Garantir que a imagem não exceda as dimensões do contêiner */
+    max-height: 100%; /* Garantir que a imagem não exceda as dimensões do contêiner */
+}
+
+
+#home h2 {
+    font-size: 4rem; /* Tamanho maior para o título */
+    margin-bottom: 20px; /* Espaço adicional abaixo do título */
+    padding-right: 50%;
+}
+#home {
+    background-image: url("/images/bg-sobre.jpg");
+    background-size:cover;
+    background-position:top;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f7f6f6;
+    text-align:center;
+    padding: 100px 0 20px; /* 100px de preenchimento na parte superior, 0 nos lados e 20px na parte inferior */
+}
+
+    /* Estilizando o botão de comprar */
+    .iceCreamItem button {
+        background-color: #1f9c24; /* Cor de fundo do botão */
+        color: white; /* Cor do texto do botão */
+        border: none; /* Remove a borda do botão */
+        padding: 5px 5px; /* Espaçamento interno do botão */
+        font-size: 14px; /* Tamanho da fonte do botão */
+        border-radius: 50px; /* Borda arredondada do botão */
+        cursor: pointer; /* Cursor ao passar sobre o botão */
+    }
+    /* Animação de pulsação ao clicar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.iceCreamItem button.clicked {
+    animation: pulse 0.5s; /* Aplica a animação de pulsação */
+}
+    #products h2{
+    padding-left:40%
+    }
+
+    #iceCreamList {
+        padding-left: 10%;
+    }
+/* Estilos para a barra de pesquisa */
+#searchInput {
+    text-align: center;
+    width: 1470px; /* Largura da barra de pesquisa */
+    margin: 0 auto; /* Margens automáticas para centralizar horizontalmente */
+    padding: 8px 15px; /* Espaçamento interno */
+    border: 2px solid #ccc; /* Borda cinza */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none; /* Remover o contorno ao focar */
+    transition: border-color 0.3s ease; /* Transição suave da cor da borda */
+}
+
+/* Estilos para a barra de pesquisa quando focada */
+#searchInput:focus {
+    border-color: #6c63ff; /* Mudança na cor da borda ao focar */
+}
+
+/* Estilos para o placeholder da barra de pesquisa */
+#searchInput::placeholder {
+    color: #999; /* Cor do texto do placeholder */
+}
+
+/* Estilos para o botão de pesquisa */
+#searchButton {
+    background-color: #473ee8; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remover a borda */
+    padding: 8px 20px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer; /* Alterar o cursor ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+/* Estilos para o botão de pesquisa quando passa o mouse por cima */
+#searchButton:hover {
+    background-color: #564db8; /* Mudança na cor de fundo ao passar o mouse */
+}
+
