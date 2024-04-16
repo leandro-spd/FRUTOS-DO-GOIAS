@@ -1,3 +1,4 @@
+/* Estilos para o corpo do documento */
 body {
     background-image: url(/images/bg-acai.jpg);
     font-family: Arial, sans-serif;
@@ -9,17 +10,23 @@ body {
     margin: 0;
 }
 
+/* Estilos para o contêiner de login */
 .login-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Largura do contêiner */
+    max-width: 400px; /* Largura máxima do contêiner */
 }
 
+/* Estilos para o título do formulário de login */
 .login-container h2 {
     margin-bottom: 20px;
+    text-align: center; /* Centralizando o texto */
 }
 
+/* Estilos para os elementos do formulário de login */
 .login-container form div {
     margin-bottom: 10px;
 }
@@ -30,10 +37,11 @@ body {
 }
 
 .login-container form input {
-    width: 95%;
-    padding: 5px;
+    width: 100%; /* Largura total */
+    padding: 8px;
     border: 1px solid #d2a9a9;
     border-radius: 5px;
+    box-sizing: border-box; /* Para incluir padding na largura total */
 }
 
 .login-container form button {
@@ -50,4 +58,5 @@ body {
 .login-container form button:hover {
     background-color: #5b0c94;
 }
+
 /* Estilo para a seção de início */

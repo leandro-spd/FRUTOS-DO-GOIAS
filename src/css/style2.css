@@ -11,27 +11,32 @@ body {
     color: #000;
     animation: changeColor 25s infinite; /* Animação de 10 segundos, repetindo infinitamente */
 }
+
 header {
     background-color: #531a7d; /* Roxo */
     color: #f1e9e9;
     padding: 20px;
+    text-align: center; /* Centraliza o texto */
 }
 
 header h1 {
     margin: 0;
-    padding-left: 40%;
-
 }
 
 nav ul {
-    list-style-type:none;
-    padding: 2ch;
+    list-style-type: none;
+    padding: 0;
     margin-bottom: auto;
+    display: flex; /* Transforma a lista em flex container */
+    justify-content: center; /* Centraliza os itens horizontalmente */
 }
 
 nav ul li {
-    display:inline-flex ;
-    margin-right: 201px;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove a margem do último item */
 }
 
 nav ul li a {
@@ -40,7 +45,7 @@ nav ul li a {
 }
 
 main {
-    padding: 05px;
+    padding: 20px;
 }
 
 section {
@@ -52,39 +57,24 @@ section h2 {
     color: #6a0dad; /* Roxo */
     margin-bottom: 10px;
 }
+
 section p {
-    padding-right: 50%;
     color: #000;
 }
 
 #iceCreamList {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens horizontalmente */
 }
-
-/* Estilo para o contêiner de cada item de sorvete */
-
-
-footer {
-    background-color: #000; /* Preto */
-    color: #ebe6e6;
-    text-align: center;
-    padding: 10px 0;
-}
-
-
 
 /* Estilo para o contêiner de cada item de sorvete */
 .iceCreamItem {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 100px;
+    margin: 20px; /* Adiciona espaçamento entre os itens */
     overflow: hidden;
-}
-/* Adiciona margem entre os sorvetes */
-.iceCreamItem {
-    margin-bottom: 20px;
 }
 
 /* Estilo para as imagens dentro dos contêineres */
@@ -97,24 +87,92 @@ footer {
     max-height: 100%; /* Garantir que a imagem não exceda as dimensões do contêiner */
 }
 
-
-#home h2 {
-    font-size: 4rem; /* Tamanho maior para o título */
-    margin-bottom: 20px; /* Espaço adicional abaixo do título */
-    padding-right: 50%;
+footer {
+    background-color: #000; /* Preto */
+    color: #ebe6e6;
+    text-align: center;
+    padding: 10px 0;
 }
+
+/* Estilos para a barra de pesquisa */
+#searchInput {
+    width: 100%;
+    max-width: 500px; /* Largura máxima para dispositivos maiores */
+    margin: 10px auto; /* Margens automáticas para centralizar horizontalmente */
+    padding: 8px 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilos para o botão de pesquisa */
+#searchButton {
+    width: 100%;
+    max-width: 200px; /* Largura máxima para dispositivos maiores */
+    margin: 10px auto;
+    padding: 8px 20px;
+    background-color: #473ee8;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #564db8;
+}
+
+/* Estilos para a seção home */
 #home {
     background-image: url("/images/bg-sobre.jpg");
-    background-size:cover;
-    background-position:top;
+    background-size: cover;
+    background-position: top;
     height: 65vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #f7f6f6;
-    text-align:center;
+    text-align: center;
     padding: 100px 0 20px; /* 100px de preenchimento na parte superior, 0 nos lados e 20px na parte inferior */
+}
+
+#home h2 {
+    font-size: 4rem; /* Tamanho maior para o título */
+    margin-bottom: 20px; /* Espaço adicional abaixo do título */
+}
+
+/* Estilos para o carrinho de compras */
+#cartItems {
+    text-align: center; /* Centraliza os itens */
+}
+
+#total {
+    margin-top: 20px;
+}
+
+#checkoutButton {
+    margin-top: 20px;
+}
+
+/* Animação de pulsação ao clicar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.iceCreamItem button.clicked {
+    animation: pulse 0.5s; /* Aplica a animação de pulsação */
 }
 
     /* Estilizando o botão de comprar */
@@ -143,49 +201,49 @@ footer {
 .iceCreamItem button.clicked {
     animation: pulse 0.5s; /* Aplica a animação de pulsação */
 }
-    #products h2{
-    padding-left:40%
-    }
 
-    #iceCreamList {
-        padding-left: 10%;
-    }
-/* Estilos para a barra de pesquisa */
-#searchInput {
-    text-align: center;
-    width: 1470px; /* Largura da barra de pesquisa */
-    margin: 0 auto; /* Margens automáticas para centralizar horizontalmente */
-    padding: 8px 15px; /* Espaçamento interno */
-    border: 2px solid #ccc; /* Borda cinza */
-    border-radius: 20px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte */
-    outline: none; /* Remover o contorno ao focar */
-    transition: border-color 0.3s ease; /* Transição suave da cor da borda */
+
+#home img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem ajustando a altura automaticamente */
+    max-height: 400px; /* Define uma altura máxima para a imagem */
 }
 
-/* Estilos para a barra de pesquisa quando focada */
-#searchInput:focus {
-    border-color: #6c63ff; /* Mudança na cor da borda ao focar */
+#iceCreamList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Distribui os itens em colunas responsivas */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Adiciona um espaço interno */
 }
 
-/* Estilos para o placeholder da barra de pesquisa */
-#searchInput::placeholder {
-    color: #999; /* Cor do texto do placeholder */
+/* Estilo para o contêiner de cada item de sorvete */
+.iceCreamItem {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
 }
 
-/* Estilos para o botão de pesquisa */
-#searchButton {
-    background-color: #473ee8; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Remover a borda */
-    padding: 8px 20px; /* Espaçamento interno */
-    border-radius: 20px; /* Bordas arredondadas */
-    cursor: pointer; /* Alterar o cursor ao passar por cima */
-    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+.iceCreamItem:hover {
+    transform: translateY(-5px); /* Efeito de levantamento ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
 }
 
-/* Estilos para o botão de pesquisa quando passa o mouse por cima */
-#searchButton:hover {
-    background-color: #564db8; /* Mudança na cor de fundo ao passar o mouse */
+/* Estilo para as imagens dentro dos contêineres */
+.iceCreamItem img {
+    width: 100%; /* Preenche completamente o contêiner */
+    height: 100%; /* Preenche completamente o contêiner */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
 }
+
+
+
 
