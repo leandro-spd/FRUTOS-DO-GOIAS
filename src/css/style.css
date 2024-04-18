@@ -63,9 +63,8 @@ h2 {
     text-align: center;
     background-image: url(/images/favicon-96x96.png); /* Caminho da logomarca */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
-    background-size: contain; /* Garante que a imagem se ajuste ao tamanho do elemento */
+    background-size: contain; /* Garante que a imagem se ajuste ao tamanho do elemento sem distorcer */
     background-position: center; /* Centraliza a imagem horizontalmente */
-    padding: 30px; /* Adiciona um espaçamento interno ao redor da logomarca */
+    padding: 20px; /* Adiciona um espaçamento interno ao redor da logomarca */
     text-indent: -9999px; /* Move o texto para fora da área visível */
 }
-
