@@ -7,13 +7,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #53db68;
+    background-color: #dfece1;
     color: #000;
     animation: changeColor 25s infinite; /* Animação de 10 segundos, repetindo infinitamente */
 }
 
 header {
-    background-color: #531a7d; /* Roxo */
+    background-color: #096010; /* Roxo */
     color: #f1e9e9;
     padding: 20px;
     text-align: center; /* Centraliza o texto */
@@ -54,7 +54,7 @@ section {
 }
 
 section h2 {
-    color: #6a0dad; /* Roxo */
+    color: #096010; /* Roxo */
     margin-bottom: 10px;
 }
 
@@ -128,9 +128,9 @@ footer {
 /* Estilos para a seção home */
 #home {
     background-image: url("/images/bg-sobre.jpg");
-    background-size: cover;
-    background-position: top;
-    height: 65vh;
+    background-size: cover; /* Torna a imagem de fundo responsiva */
+    background-position: center; /* Centraliza a imagem horizontal e verticalmente */
+    height: 100vh; /* Utiliza toda a altura da tela */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,18 +158,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Animação de pulsação ao clicar */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
+
 
 .iceCreamItem button.clicked {
     animation: pulse 0.5s; /* Aplica a animação de pulsação */
@@ -177,13 +166,14 @@ footer {
 
     /* Estilizando o botão de comprar */
     .iceCreamItem button {
-        background-color: #1f9c24; /* Cor de fundo do botão */
+        background-color: #0c8a10; /* Cor de fundo do botão */
         color: white; /* Cor do texto do botão */
         border: none; /* Remove a borda do botão */
         padding: 5px 5px; /* Espaçamento interno do botão */
         font-size: 14px; /* Tamanho da fonte do botão */
         border-radius: 50px; /* Borda arredondada do botão */
         cursor: pointer; /* Cursor ao passar sobre o botão */
+        animation: pulse 0.5s; /* Aplica a animação de pulsação */
     }
     /* Animação de pulsação ao clicar */
 @keyframes pulse {
@@ -198,9 +188,6 @@ footer {
     }
 }
 
-.iceCreamItem button.clicked {
-    animation: pulse 0.5s; /* Aplica a animação de pulsação */
-}
 
 
 #home img {
@@ -243,7 +230,5 @@ footer {
     object-fit: cover; /* Mantém a proporção da imagem */
     transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
 }
-
-
 
 

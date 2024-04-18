@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Simulação de dados de usuários
     const users = [
-        { username: 'admin', password: '1234' }
+        { username: 'frutos.ita', password: '1234' },
+        { username: 'frutos.leo', password: '1234' }
     ];
     
     // Função para verificar as credenciais de login
@@ -68,7 +69,7 @@ const iceCreams = [
     { flavor: 'Picolé de Pequi', price: 5.00, image: 'images/pequi.png' },
     { flavor: 'Picolé de Uva', price: 6.00, image: 'images/picoleUVA.png' },
     { flavor: 'Picolé Skimó', price: 4.50, image: 'images/skimó.png' },
-    { flavor: 'Picolé de Milho Verde', price: 4.00, image: '/images/milhoverde.png' },
+    { flavor: 'Milho Verde', price: 4.00, image: '/images/milhoverde.png' },
     { flavor: 'Kids Chocolate', price: 5.50, image: 'images/kidschocolate.png' },
     { flavor: 'Picolé Torta de Limão', price: 4.50, image: 'images/tortalimao.png' },
     { flavor: 'Picolé de Flocos', price: 4.50, image: 'images/flocos.png' },
@@ -226,5 +227,6 @@ renderIceCreams();
 
 
     });
+
     
 })(jQuery);
